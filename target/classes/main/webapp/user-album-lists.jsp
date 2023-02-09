@@ -33,6 +33,7 @@
 		<input type="submit" value="Delete" name="selectedValue">
 		<input type="submit" value="Add" name="selectedValue">
 	</form>
+	<a href="index.html">Add albums</a><br />
 	<a href="viewAllAlbumListsServlet">View all Album Lists</a><br />
 	<a href="addNewAlbumListServlet">Create an Album List</a>
 </body>
