@@ -3,10 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <title>Add Album</title>
+<script type="text/javascript">
+	function validate(){
+		if(document.albumForm.albumName.value == ""){
+			alert("Please input an Album Name");
+			document.albumForm.albumName.focus();
+			return false;
+		}
+		if(document.albumForm.artist.value == ""){
+			alert("Please input an Artist Name");
+			document.albumForm.artist.focus();
+			return false;
+		}
+		if(document.albumForm.genre.value == ""){
+			alert("Please input a Genre");
+			document.albumForm.genre.focus();
+			return false;
+		}
+	    if(document.albumForm.numSongs.value == ""){
+			alert("Please input a number of songs");
+			document.albumForm.genre.focus();
+			return false;
+		}
+		return(true);
+	}
+</script>
 </head>
+
 <body>
 	<h1>Add an Album</h1>
-	<form action ="addAlbumServlet" method="post">
+	<form name="albumForm" onsubmit="return validate();"action ="addAlbumServlet" method="post">
 	Album Name: <input type="text" name="albumName"> <br />
 	Artist: <input type="text" name="artist"><br />
 	Genre: <input type="text" name="genre"><br />
